@@ -3,13 +3,10 @@
 # See: https://circleci.com/docs/configuration-reference
 # Stacks detected: cicd:empty:
 version: 2.1
-orbs:
-  browser-tools: circleci/browser-tools@1.1.0
 jobs:
   build:
     docker:
       - image: circleci/openjdk:11-jdk-stretch-browsers
-      - image: cimg/node:18.20.4-browsers
 
     environment:
       # Customize the JVM maximum heap limit

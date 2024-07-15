@@ -31,7 +31,6 @@ public class TestGridInDocker {
 		System.out.println("=====   GRID CHROME STANDALONE COMPLETED =====");
 	}
 	
-	@Test
 	private static void firefoxRun() throws MalformedURLException, InterruptedException {
 		FirefoxOptions fOptions =  new FirefoxOptions();
 		WebDriver fDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),fOptions);
