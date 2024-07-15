@@ -7,6 +7,8 @@ jobs:
   build:
     docker:
       - image: circleci/openjdk:11-jdk-stretch-browsers
+      - image: cimg/node:16.13.1-browsers
+      - image: selenium/standalone-chrome
 
     environment:
       # Customize the JVM maximum heap limit
