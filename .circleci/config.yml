@@ -29,7 +29,7 @@ jobs:
       - run:
           name: Start Selenium
           command: |
-            java -jar selenium-server-4.0.0-alpha-2.jar -log test-reports/selenium.log
+            java -jar selenium-server-4.0.0-alpha-2.jar standalone --port 5555 -log test-reports/selenium.log
           background: true
 
       - run: mvn dependency:go-offline
