@@ -12,7 +12,7 @@ jobs:
       # Replace this with a real test runner invocation
       - run:
           name: Run tests
-          command: echo 'TestAllDriversTesting' && false
+          command: echo 'clean install' && false
   build:
     docker:
       - image: cimg/base:stable
