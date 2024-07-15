@@ -17,9 +17,6 @@ jobs:
     steps:
       - checkout
       - run: mkdir test-reports
-      - browser-tools/install-browser-tools
-      - browser-tools/install-chrome
-      - browser-tools/install-firefox
       - run:
           name: Download Selenium
           command: |
