@@ -20,7 +20,6 @@ public class TestGridInDocker {
 //		edgeRun();
 	}
 	
-	@Test
 	private static void chromeRun() throws MalformedURLException, InterruptedException {
 		ChromeOptions cOptions = new ChromeOptions();
 		WebDriver cDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cOptions);
@@ -30,7 +29,7 @@ public class TestGridInDocker {
 		cDriver.close();
 		System.out.println("=====   GRID CHROME STANDALONE COMPLETED =====");
 	}
-	
+	@Test
 	private static void firefoxRun() throws MalformedURLException, InterruptedException {
 		FirefoxOptions fOptions =  new FirefoxOptions();
 		WebDriver fDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),fOptions);
