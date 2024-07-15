@@ -32,7 +32,7 @@ public class TestGridInDocker {
 	@Test
 	private static void firefoxRun() throws MalformedURLException, InterruptedException {
 		FirefoxOptions fOptions =  new FirefoxOptions();
-		WebDriver fDriver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"),fOptions);
+		WebDriver fDriver = new RemoteWebDriver(new URL("http://127.0.0.1:5555/wd/hub"),fOptions);
 		fDriver.get("https://www.selenium.dev/documentation/");
 		fDriver.findElement(By.xpath("//*[@id=\"m-documentationgrid\"]/span")).click();
 		Thread.sleep(2000);
