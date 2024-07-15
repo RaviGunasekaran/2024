@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class TestAllDriversTesting {
 
-	@Test
+//	@Test
 	public void sample() throws InterruptedException {
 		// Chrome Driver Declarations
 		ChromeOptions options = new ChromeOptions();

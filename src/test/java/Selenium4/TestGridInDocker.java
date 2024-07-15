@@ -9,16 +9,18 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
 
 public class TestGridInDocker {
 
 	public static void main(String[] args) throws InterruptedException, MalformedURLException {
 		
-		chromeRun();
+//		chromeRun();
 //		firefoxRun();
 //		edgeRun();
 	}
-
+	
+	@Test
 	private static void chromeRun() throws MalformedURLException, InterruptedException {
 		ChromeOptions cOptions = new ChromeOptions();
 		WebDriver cDriver = new RemoteWebDriver(new URL("http://localhost:4444"),cOptions);
