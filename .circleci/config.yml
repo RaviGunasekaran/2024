@@ -25,12 +25,22 @@ jobs:
           name: download chrome
           command: |
             curl https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg --output googlechrome.dmg
+            
+      - run:
+          name: Check port 4444 BEFORE Standalone server
+          command: |
+            netstat -ano | findstr :4444
           
       - run:
           name: Start Selenium
           command: |
-            java -jar selenium-server-4.0.0-alpha-2.jar standalone --port 5555 -log test-reports/selenium.log
+            java -jar selenium-server-4.0.0-alpha-2.jar standalone -log test-reports/selenium.log
           background: true
+          
+      - run:
+          name: Check port 4444 AFTER Standalone server
+          command: |
+            netstat -ano | findstr :4444    
 
       - run: mvn dependency:go-offline
 
