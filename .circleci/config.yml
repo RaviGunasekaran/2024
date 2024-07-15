@@ -36,7 +36,7 @@ jobs:
 
       # run tests!
       - run: mvn clean install
-      - run: mvn test -Dtest=TestAllDriversTesting
+      - run: mvn test -Dtest=TestGridInDocker
       
 
       - run:
