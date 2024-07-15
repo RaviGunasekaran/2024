@@ -19,7 +19,7 @@ public class TestGridInDocker {
 //		firefoxRun();
 //		edgeRun();
 	}
-	
+	@Test
 	private static void chromeRun() throws MalformedURLException, InterruptedException {
 		ChromeOptions cOptions = new ChromeOptions();
 		WebDriver cDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cOptions);
