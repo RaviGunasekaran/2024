@@ -9,11 +9,6 @@ jobs:
       - image: circleci/openjdk:11-jdk-stretch-browsers
       - image: selenium/standalone-chrome
       - image: cimg/node:22.4.1-browsers
-    steps:
-      - browser-tools/install-browser-tools
-      - browser-tools/install-chrome
-      - browser-tools/install-firefox
-      - checkout
 
     environment:
       # Customize the JVM maximum heap limit
@@ -22,6 +17,9 @@ jobs:
     steps:
       - checkout
       - run: mkdir test-reports
+      - browser-tools/install-browser-tools
+      - browser-tools/install-chrome
+      - browser-tools/install-firefox
       - run:
           name: Download Selenium
           command: |
