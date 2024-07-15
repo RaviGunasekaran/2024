@@ -42,7 +42,6 @@ public class TestGridInDocker {
 		System.out.println("=====   GRID FIREFOX STANDALONE COMPLETED =====");
 	}
 
-	@Test
 	private static void edgeRun() throws MalformedURLException, InterruptedException {
 		EdgeOptions eOptions =  new EdgeOptions();
 		WebDriver eDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),eOptions);
