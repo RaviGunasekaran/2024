@@ -29,11 +29,11 @@ jobs:
       - run: 
           name: Generate Report1
           command: |
-          mvn site
+            mvn site
       - run: 
           name: Generate Report2
           command: |
-          mvn surefire-report:report 
+            mvn surefire-report:report 
 
       - run:
           name: Save test results
