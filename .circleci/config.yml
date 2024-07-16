@@ -36,7 +36,3 @@ jobs:
           when: always
       - store_test_results:
           path: ~/testng/results/
-      - store_artifacts:
-          path: ~/testng/results/
-      - store_artifacts:
-          path:  testng/results/
