@@ -42,12 +42,12 @@ jobs:
           name: Save test results
           command: |
             pwd
-            cd ~/test-output/
+            cd ~/home/circleci/repo/test-output/
             pwd
             ls -la
-            cp index.html ~/test-reports
-            cd ~/test-reports
+            cp index.html ~/home/circleci/repo/test-reports/
+            cd ~/home/circleci/repo/test-reports
             ls -la
           when: always
       - store_test_results:
-          path: ~/test-reports
+          path: ~/home/circleci/repo/test-reports/
